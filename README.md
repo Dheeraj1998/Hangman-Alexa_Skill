@@ -6,6 +6,8 @@ The skill is currently named as hangman and is invoked by saying the same. The u
 
 ## Sample interaction
 
+<p align="center"> <img src = 'sample-interaction.png' </p>
+
 ### TODO
 1. Allow the user to guess the word directly without guessing all the letters.
 2. Add a concise 'How to play' instructions to the skill.
