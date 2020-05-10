@@ -1,0 +1,304 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "hangman",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "IdentifyLetterIntent",
+          "slots": [
+            {
+              "name": "SpokenLetter",
+              "type": "LetterSlot"
+            }
+          ],
+          "samples": [
+            "is it {SpokenLetter}",
+            "letter is {SpokenLetter}",
+            "the letter is {SpokenLetter}"
+          ]
+        },
+        {
+          "name": "GamePlayIntent",
+          "slots": [],
+          "samples": [
+            "lets begin",
+            "lets play",
+            "start the game"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Z",
+                "synonyms": [
+                  "z"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Y",
+                "synonyms": [
+                  "y"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "X",
+                "synonyms": [
+                  "x"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "W",
+                "synonyms": [
+                  "w"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "V",
+                "synonyms": [
+                  "v"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "U",
+                "synonyms": [
+                  "u"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "T",
+                "synonyms": [
+                  "t"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "S",
+                "synonyms": [
+                  "s"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "R",
+                "synonyms": [
+                  "r"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Q",
+                "synonyms": [
+                  "q"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "P",
+                "synonyms": [
+                  "p"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "O",
+                "synonyms": [
+                  "o"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "N",
+                "synonyms": [
+                  "n"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "M",
+                "synonyms": [
+                  "m"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "L",
+                "synonyms": [
+                  "l"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "K",
+                "synonyms": [
+                  "k"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "J",
+                "synonyms": [
+                  "j"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "I",
+                "synonyms": [
+                  "i"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "H",
+                "synonyms": [
+                  "h"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "G",
+                "synonyms": [
+                  "g"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "F",
+                "synonyms": [
+                  "f"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "E",
+                "synonyms": [
+                  "e"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "D",
+                "synonyms": [
+                  "d.",
+                  "d"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "C",
+                "synonyms": [
+                  "c.",
+                  "c"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "B",
+                "synonyms": [
+                  "b.",
+                  "b"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "A",
+                "synonyms": [
+                  "a.",
+                  "a"
+                ]
+              }
+            }
+          ],
+          "name": "LetterSlot"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "IdentifyLetterIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "SpokenLetter",
+              "type": "LetterSlot",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.933303101994.661790451300.357980131223"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Slot.Validation.933303101994.661790451300.357980131223",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I did not get that. Could you repeat that?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
